@@ -2,7 +2,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 /* default font-size is 16px, therefore, 62.5% makes the default font-size 10px */
@@ -33,7 +34,8 @@ img {
 }
 
 .hue-shift {
-    animation: hue-shift 5s infinite alternate;
+    -webkit-animation: hue-shift 5s infinite alternate;
+            animation: hue-shift 5s infinite alternate;
 }
 
 /*Header & Nav*/
@@ -50,12 +52,20 @@ header {
 .nav {
     height: 10rem;
     /* side by side (flex) */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    align-items: flex-end;
-    justify-content: space-between;
+    -webkit-box-align: end; 
+        -ms-flex-align: end; 
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
 }
@@ -72,6 +82,8 @@ header {
     font-size: 1.4rem;
     text-transform: uppercase;
     color: #fff;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
     transition: opacity .3s;
     font-weight: 600;
 }
@@ -90,11 +102,17 @@ header {
 .landing-page {
     width: 100%;
     min-height: 100vh;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#3B4679), to(#2B3153));
+    background-image: -o-linear-gradient(top left, #3B4679, #2B3153);
     background-image: linear-gradient(to bottom right, #3B4679, #2B3153);
     position: relative;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     z-index: 1;
 }
 
@@ -115,7 +133,9 @@ header {
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .content-details {
@@ -152,6 +172,8 @@ header {
 
 .search-btn {
     width: 10rem;
+    background-image: -webkit-gradient(linear, left top, right top, from(#FF83D5), to(#FFCCB0));
+    background-image: -o-linear-gradient(left, #FF83D5, #FFCCB0);
     background-image: linear-gradient(to right, #FF83D5, #FFCCB0);
     color: #fff;
     cursor: pointer;
@@ -159,10 +181,14 @@ header {
 }
 
 .search-btn:hover {
+    background-image: -webkit-gradient(linear, right top, left top, from(#FF83D5), to(#FFCCB0));
+    background-image: -o-linear-gradient(right, #FF83D5, #FFCCB0);
     background-image: linear-gradient(to left, #FF83D5, #FFCCB0); 
 }
 
 .sn-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -172,6 +198,8 @@ header {
     height: 3rem;
     border: 1px solid #929FC5;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 2.5rem;
 }
@@ -181,6 +209,8 @@ header {
 }
 
 .sn-link:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#A971FF), to(#00F0FF));
+    background-image: -o-linear-gradient(left, #A971FF, #00F0FF);
     background-image: linear-gradient(to right, #A971FF, #00F0FF);
     color: #fff;
 }
@@ -191,7 +221,8 @@ header {
 }
 
 .blob-large {
-    animation: move-up 2s infinite alternate; 
+    -webkit-animation: move-up 2s infinite alternate;
+            animation: move-up 2s infinite alternate; 
 }
 
 .blob-bean {
@@ -199,7 +230,8 @@ header {
     top: 2.5rem;
     left: -1rem;
     z-index: 10;
-    animation: move-down 2s infinite alternate;
+    -webkit-animation: move-down 2s infinite alternate;
+            animation: move-down 2s infinite alternate;
 }
 
 .blob {
@@ -210,7 +242,9 @@ header {
 .blob-1 {
     top: -11rem;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
 }
 
 .blob-2 {
@@ -231,30 +265,69 @@ header {
 
 /*Animations*/
 
-@keyframes move-up {
+@-webkit-keyframes move-up {
     from{
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     to{
-        transform: translateY(2rem);
+        -webkit-transform: translateY(2rem);
+                transform: translateY(2rem);
+    }
+}
+
+@keyframes move-up {
+    from{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    to{
+        -webkit-transform: translateY(2rem);
+                transform: translateY(2rem);
+    }
+}
+
+@-webkit-keyframes move-down {
+    from{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    to{
+        -webkit-transform: translateY(-2rem);
+                transform: translateY(-2rem);
     }
 }
 
 @keyframes move-down {
     from{
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     to{
-        transform: translateY(-2rem);
+        -webkit-transform: translateY(-2rem);
+                transform: translateY(-2rem);
+    }
+}
+
+@-webkit-keyframes hue-shift {
+    from{
+        -webkit-filter: hue-rotate(0);
+                filter: hue-rotate(0);
+    }
+    to{
+        -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
     }
 }
 
 @keyframes hue-shift {
     from{
-        filter: hue-rotate(0);
+        -webkit-filter: hue-rotate(0);
+                filter: hue-rotate(0);
     }
     to{
-        filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
     }
 }
 
@@ -262,7 +335,9 @@ header {
 
 @media screen and (max-width: 768px){
     .nav {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .content {
@@ -270,7 +345,9 @@ header {
     }
 
     .content-details {
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
         max-width: 100%;
     }
 
@@ -331,7 +408,10 @@ header {
 @media screen and (max-width: 700px) {
 
     .nav {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         height: 5rem;
     }
 
