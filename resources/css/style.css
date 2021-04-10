@@ -69,7 +69,7 @@ header {
 }
 
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     color: #fff;
     transition: opacity .3s;
@@ -82,8 +82,7 @@ header {
 
 .logo {
     display: block;
-    width: 8rem;
-
+    width: 10rem;
 }
 
 /*Main content*/
@@ -124,9 +123,10 @@ header {
 }
 
 .title {
-    font-size: 6rem;
+    font-size: 5rem;
     color: #fff;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .description {
