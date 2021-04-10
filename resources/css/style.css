@@ -123,7 +123,7 @@ header {
     left: 0;
     width: inherit;
     height: 100vh;
-    background-image: url("./img/bg-pat.png");
+    background-image: url("bg-pat.png");
     background-size: cover;
     opacity: .8;
     /* z-index 'child' never falls behind it's parent */
